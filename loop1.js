@@ -171,3 +171,32 @@ function printMe(item){
 coding.forEach(printMe)
 
 
+ coding.forEach((item , index , arr)=>{
+    console.log(item,index,arr);
+ })
+
+
+ const mycoding =[
+    {
+        langname:"javascript",
+        langFilename:"Js"
+    },
+
+
+    {
+        langname:"React",
+        langFilename:"Js"
+    },
+    {
+        langname:"Cshrap",
+        langFilename:"dotet"
+    },
+    {
+        langname:"Java",
+        langFilename:"Ja"
+    },
+ ]
+
+ mycoding.forEach((i)=>{
+    console.log(i.langFilename);
+ })
