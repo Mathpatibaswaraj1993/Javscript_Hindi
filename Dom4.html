@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(LangName){
+       const li = document.createElement('li') // create li element
+       li.innerHTML=`${LangName}` // add text to li element
+       document.querySelector('.language').appendChild(li)// add li to ul element
+        // add li to ul element
+ }
+
+    addLanguage('Python') // add python to ul element
+    addLanguage('Java') // add java to ul element
+    addLanguage('C++') // add c++ to ul element
+    addLanguage('C#') // add c# to ul element
+
+
+    function  addOptiLanguage(langName){
+         const li = document.createElement('li') // create li element
+         li.appendChild(document.createTextNode(langName)) // add text to li element
+         document.querySelector('.language').appendChild(li)// add li to ul element
+         
+   }
+   addOptiLanguage('JavaScript') // add javascript to ul element
+   addOptiLanguage('PHP') // add php to ul element
+   addOptiLanguage('Ruby') // add ruby to ul element
+   addOptiLanguage('Swift') // add swift to ul element
+   addOptiLanguage('Go') // add go to ul element
+   addOptiLanguage('Rust') // add rust to ul element
+
+    //Edit
+
+   const secondLang =  document.querySelector("Li:nth-child(2)") // select second li element
+  console.log(secondLang) // log second li element
+   secondLang.innerHTML = "Mojo" // change text of second li element
+   const newLi = document.createElement('li') // create li element
+   newLi.textContent = "This is a new li" // add text to li element
+   newLi.textContent = "Mojo" // add text to li element
+   secondLang.replaceWith(newLi) // replace second li element with new li element
+
+    //Edit
+
+    const firstLang =  document.querySelector("Li:first-child") // select first li element
+    console.log(firstLang) // log first li element
+
+    firstLang.outerHTML = "<li>Typescript</li>" // change text of first li element
+
+
+    //Remove
+    const LastLang =  document.querySelector("Li:last-child") // select last li element
+    console.log(LastLang) // log last li element
+    LastLang.remove() // remove last li element
+
+</script>
+</html>
