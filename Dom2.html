@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+    </div>
+    <script>
+    //   const para1 = document.querySelector('.parent')  
+    //     console.log(para1)
+    //     console.log(para1.children);
+    const pa = document.querySelector('.parent')
+    console.log(pa.children);
+    console.log(pa);
+    console.log(pa.children[1]);
+
+     for (let i = 0; i < pa.children.length; i++) {
+        console.log(pa.children[i].innerHTML);
+     }
+     pa.children[1].style.color="orange"
+     pa.children[1].style.backgroundColor="black"
+     console.log(pa.firstElementChild);
+        console.log(pa.lastElementChild);
+        console.log(pa.firstElementChild.innerHTML);
+        console.log(pa.lastElementChild.innerHTML);
+        console.log(pa.firstElementChild.nextElementSibling.innerHTML);
+        console.log(pa.lastElementChild.previousElementSibling.innerHTML);
+        console.log(pa.firstElementChild.parentElement.innerHTML);
+        console.log(pa.lastElementChild.parentElement.innerHTML);
+
+
+        const dayOne = document.querySelector('.day')//this is child of parent
+        console.log(dayOne);
+        console.log(dayOne.parentElement); //this is parent of child
+        console.log(dayOne.parentElement); //this is parent of parent
+        console.log(dayOne.nextElementSibling); //this is parent of parent of parent
+        console.log("NODES:",pa.childNodes)
+
+</script>
+</body>
+</html>
