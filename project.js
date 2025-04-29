@@ -1,30 +1,11 @@
-const buttons = document.querySelectorAll('.button')
-console.log(buttons)
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
 
-const body = document.querySelector('body')
-
-buttons.forEach((button) => {
-  console.log(button) 
+buttons.forEach(function (button) {
   button.addEventListener('click', function(e) {
-    // console.log('Button clicked')
-    console.log(e.target);
-    // console.log(e);
-
-    if(e.target.id === 'gray'){
-        body.style.backgroundColor = e.target.id;
+    const color = e.target.id.toLowerCase();
+    if (["gray", "white", "blue", "yellow"].includes(color)) {
+      body.style.backgroundColor = color;
     }
-
-    // if(e.target.id === "white"){
-    //     body.style.backgroundColor = e.target.id;
-    // }
-
-    // if(e.target.id === "blue"){
-    //     body.style.backgroundColor = e.target.id;
-    // }
-
-    // if(e.target.id === "Yellow"){
-    //     body.style.backgroundColor = e.target.id;
-    // }
-
-  })  
-})
+  });
+});
